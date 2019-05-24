@@ -39,6 +39,7 @@ App({
     // interfaceUrl:"https://travel.dhhs.com.cn",
     userData: null,
     openid: '',
+    pws:'',
     tel:'',
     ssession_key: '',
     cookie: '', //修改密码需要,
