@@ -1,0 +1,51 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/my/my",
+    "pages/order/order",
+    "pages/product/product",
+    "pages/login/login",
+    "pages/setorder/setorder",
+    "pages/success/success",
+    "pages/password/password",
+    "pages/addperson/add",
+    "pages/orderdetail/detail",
+    "pages/addorder/addorder",
+    "pages/detailOrder/detail",
+    "pages/adddata/data",
+    "pages/addper/addper",
+    "pages/personlist/list"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "backgroundColor": "#ffb446",
+    "navigationBarBackgroundColor": "#ffb446",
+    "navigationBarTitleText": "万户候",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "selectedColor": "#ff9800",
+    "color": "#aaa",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "团期",
+        "iconPath": "icon/vacationG.png",
+        "selectedIconPath": "icon/vacation.png"
+      },
+      {
+        "pagePath": "pages/order/order",
+        "text": "订单",
+        "iconPath": "icon/orderG.png",
+        "selectedIconPath": "icon/order.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "icon/myG.png",
+        "selectedIconPath": "icon/my.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

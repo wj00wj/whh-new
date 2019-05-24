@@ -1,0 +1,83 @@
+<!--pages/addperson/add.wxml-->
+<i-message id="message" />
+<view class='container'>
+ <view class='item-ot'>
+  <view class='img-titel'>身份证正面:</view>
+   <view class="item">
+      <!-- 添加按钮 -->
+      <view class="addIcon" bindtap="chooseImage1" wx:if="{{imgBoolean1}}">
+          <view class=''>+</view>
+      </view>
+      <!-- 上传的图 -->
+      <view class='itemImg'  wx:else>
+        <image src="{{item1}}" data-src="{{item1}}" bindtap="previewImage1"  mode="aspectFill" />
+        <!-- 删除按钮 -->
+        <view class="delete" bindtap="deleteImg1" data-index="{{index}}">X</view>
+      </view>
+    </view>
+  </view>
+  <view class='item-ot'>
+  <view class='img-titel'>身份证反面:</view>
+   <view class="item">
+      <!-- 添加按钮 -->
+      <view class="addIcon" bindtap="chooseImage2" wx:if="{{imgBoolean2}}">
+          <view class=''>+</view>
+      </view>
+      <!-- 上传的图 -->
+      <view class='itemImg'  wx:else>
+        <image src="{{item2}}" data-src="{{item2}}" bindtap="previewImage2"  mode="aspectFill" />
+        <!-- 删除按钮 -->
+        <view class="delete" bindtap="deleteImg2" data-index="{{index}}">X</view>
+      </view>
+    </view>
+  </view>
+  <view class='item-ot'>
+  <view class='img-titel'>护照首页:
+    <view class='title-smig'>保证出发回来护照有效期六个月以上 有空白页</view>
+  </view>
+   <view class="item">
+      <!-- 添加按钮 -->
+      <view class="addIcon" bindtap="chooseImage3" wx:if="{{imgBoolean3}}">
+          <view class=''>+</view>
+      </view>
+      <!-- 上传的图 -->
+      <view class='itemImg' wx:else>
+        <image src="{{item3}}" data-src="{{item3}}" bindtap="previewImage3"  mode="aspectFill" />
+        <!-- 删除按钮 -->
+        <view class="delete" bindtap="deleteImg3" data-index="{{index}}">X</view>
+      </view>
+    </view>
+  </view>
+  <view class='item-ot'>
+  <view class='img-titel'>健康证明:
+  </view>
+   <view class="item">
+      <!-- 添加按钮 -->
+      <view class="addIcon" bindtap="chooseImage4" wx:if="{{imgBoolean4}}">
+          <view class=''>+</view>
+      </view>
+      <!-- 上传的图 -->
+      <view class='itemImg'  wx:else>
+        <image src="{{item4}}" data-src="{{item4}}" bindtap="previewImage4"  mode="aspectFill" />
+        <!-- 删除按钮 -->
+        <view class="delete" bindtap="deleteImg4" data-index="{{index}}">X</view>
+      </view>
+    </view>
+  </view>
+  <view class='item-ot'>
+  <view class='img-titel'>其他:
+  </view>
+   <view class="item">
+      <!-- 添加按钮 -->
+      <view class="addIcon" bindtap="chooseImage5" wx:if="{{imgBoolean5}}">
+          <view class=''>+</view>
+      </view>
+      <!-- 上传的图 -->
+      <view class='itemImg'  wx:else>
+        <image src="{{item5}}" data-src="{{item5}}" bindtap="previewImage5"  mode="aspectFill" />
+        <!-- 删除按钮 -->
+        <view class="delete" bindtap="deleteImg5" data-index="{{index}}">X</view>
+      </view>
+    </view>
+  </view>
+</view>

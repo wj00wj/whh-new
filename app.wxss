@@ -1,0 +1,42 @@
+/**app.wxss**/
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 0 100rpx;
+  box-sizing: border-box;
+  /* font-family: "Microsoft YaHei" */
+}
+.flexs {
+  display: flex;
+  flex-direction: row;
+}
+.loading {
+  width: 60rpx;
+  height: 60rpx;
+}
+
+.loadmore {
+  margin-top: 180rpx;
+  width: 100%;
+  height: 100rpx;
+  font-size: 28rpx;
+  color: gray;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.footer{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  border-top: 1px solid #ccc;
+  background: #fff;
+  height: 110rpx;
+  width: 100%;
+  z-index: 99;
+}

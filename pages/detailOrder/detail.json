@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "i-message": "../../disti/message/index",
+    "i-button": "../../disti/button/index",
+    "wux-popup": "../../dist/popup/index"
+  },
+  "enablePullDownRefresh": true
+}

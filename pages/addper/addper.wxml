@@ -1,0 +1,22 @@
+<!--pages/addper/addper.wxml-->
+<i-message id="message" />
+<form class='addForm'>
+  <view class='flexs inputcell'>
+    <view>姓名</view>
+    <input placeholder="请与证件保持一致(必填)" placeholder-style="color:#cfcece;" bindinput="getname" value='{{name}}' />
+  </view>
+  <view class='flexs inputcell'>
+    <view>身份证号</view>
+    <input type="idcard" placeholder="请与证件保持一致(必填)" placeholder-style="color:#cfcece;" value='{{identity}}' bindinput="getidnum" maxlength='18' />
+  </view>
+  <view class='flexs inputcell'>
+    <view>手机号</view>
+    <input type="number" placeholder="必填" placeholder-style="color:#cfcece;" value='{{phone}}' bindinput="getphone" maxlength='11' />
+  </view>
+  <view class='flexs inputcell'>
+    <view>护照号</view>
+    <input type="text" placeholder="请与证件保持一致(非必填)" placeholder-style="color:#cfcece;" value='{{passport}}' bindinput="getpassport" maxlength='30' />
+  </view>
+  <view class='delBtn' bindtap='addPerson'>添加</view>
+  <!-- <view class='tipschild'>注：身高1.2米以下，且年龄不超过14岁的为儿童，儿童报名请在备注中填写监护人姓名、电话及身份证号</view> -->
+</form>

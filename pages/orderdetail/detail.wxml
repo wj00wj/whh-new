@@ -1,0 +1,68 @@
+<!--pages/orderdetail/detail.wxml-->
+<i-message id="message" />
+<view class='container' wx:if='{{status==""}}'>
+</view>
+<view class='container' wx:if='{{status==0}}'>
+  <text class='word'>订单详情</text>
+  <view class='boxs'>
+    <view>订单号：{{detail.orderNo}}</view>
+    <view>报名路线：{{detail.regiment.regimentName}}</view>
+    <view>报名人数：{{detail.customerCount}}</view>
+    <view>订单提交时间：{{detail.createTime}}</view>
+    <view>订单金额：{{detail.money}}</view>
+    <view>订单状态：{{detail.status}}</view>
+  </view>
+  <text class='word'>客户信息</text>
+  <view class='boxs' wx:for='{{detail.customers}}' wx:key='{{index}}'>
+    <view>姓名：{{item.name}}<text wx:if='{{item.children=="是"}}'>（儿童）</text></view>
+    <view>性别：{{item.sex}}</view>
+    <view>年龄：{{item.age}}</view>
+    <view wx:if='{{item.children=="否"}}'>电话：{{item.tel}}</view>
+    <view>身份证号：{{item.identifyNo}}</view>
+    <image wx:if='{{item.children=="否"}}' mode='aspectFit' src='{{item.identifyImgPath}}'></image>
+  </view>
+  <view wx:if='{{detail.comment!=""&&detail.comment!=undefined}}'>
+    <text class='word'>备注信息</text>
+    <view class='boxs'>{{detail.comment}}</view>
+  </view>
+</view>
+<view class='container' wx:if='{{status=="待退款"}}'>
+  <text class='word'>退款详情</text>
+  <view class='boxs'>
+    <view>订单状态：{{refunddetail.status}}</view>
+    <view>实缴金额：{{refunddetail.money}}</view>
+    <view wx:if='{{refunddetail.money-refunddetail.refundMoney>0}}'>
+      <view>扣款金额：{{refunddetail.money-refunddetail.refundMoney}}</view>
+      <view>合同：{{percentMoneys}}元 </view>
+      <view wx:if="{{refunddetail.ticketRefund!=undefined}}"> 票务：{{-refunddetail.ticketRefund.money}}元，({{refunddetail.ticketRefund.moneyIntro}})</view>
+      <view wx:if="{{refunddetail.refund!=undefined}}"> 计调：{{-refunddetail.refund.money}}元，({{refunddetail.refund.money}})</view>
+    </view>
+    <!-- <view wx:if='{{refunddetail.money-refunddetail.refundMoney<0}}'>
+      <view>补偿金额：{{refunddetail.refundMoney-refunddetail.money}}元</view>
+    </view> -->
+    <view>应退金额：{{refunddetail.refundMoney}}</view>
+  </view>
+  <view class='tips'>退款审核通过后，带领客户到财务领取退款金额即可！</view>
+</view>
+<view class='container' wx:if='{{status=="已驳回"}}'>
+  <view class='boxdiv'>
+    <text class='word'>审核人：{{rejectinfor.verifyNewPeople.position.positionName}}--{{rejectinfor.verifyNewPeople.realName}}</text>
+    <view class='inners'>驳回原因：{{rejectinfor.rejectReason}}</view>
+  </view>
+  <view class='boxdiv'>
+    <view class='flexs perlist' wx:for='{{modifyinfor.customers}}' wx:key='{{index}}'>
+      <view style='width:150rpx; padding-left:15rpx;'>{{item.name}}</view>
+      <view style='width:150rpx;'>{{item.ages}}岁</view>
+      <navigator style='width:340rpx; text-align:right' url='../addperson/add?id={{item.id}}'>
+        <image class='iconedit' src='../../icon/edit.png'></image>
+      </navigator>
+    </view>
+  </view>
+  <view class='boxdiv'>
+    <view class='word'>备注</view>
+    <view class='inners'>
+      <textarea class='areabox' placeholder="最多可以输入140字" value='{{modifyinfor.comment}}' maxlength='140' bindinput="getcomment" />
+    </view>
+  </view>
+  <view class='btns' bindtap='modifySub'>重新提交订单</view>
+</view>

@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "wux-upload": "../../dist/upload/index",
+    "i-message": "../../disti/message/index",
+    "i-button": "../../disti/button/index"
+  },
+  "navigationBarTitleText": "添加出行人资料"
+}

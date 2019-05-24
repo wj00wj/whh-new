@@ -1,0 +1,20 @@
+<!--pages/personlist/list.wxml-->
+<view class="container">
+  <view class='list' wx:for='{{list}}' wx:key='{{index}}'>
+    <view>姓名：{{item.name}}</view>
+    <view>身份证号：{{item.identity}}</view>
+    <view>护照号：
+      <text wx:if="{{item.passport!=''&&item.passport!=null}}">{{item.passport}}</text>
+      <text wx:else>暂无</text>
+    </view>
+    <view>电话：{{item.phone}}</view>
+    <view wx:if='{{item.attachments.length!=0}}' bindtap='goAddData' data-info='{{item.id}}' data-img='{{item.attachments}}'>
+      <view>资料图片：</view>
+       <view class='imgs' wx:for='{{item.attachments}}' wx:for-item="imgitem" wx:key='{{index}}' >
+        <image lazy-load="true" mode='widthFix' src='{{imgurl}}/m_showImg.do?path={{imgitem.path}}'></image>
+      </view>
+    </view>
+    <view class='addBtn' wx:else bindtap='goAddData' data-info='{{item.id}}' data-img='{{item.attachments}}'>添加资料</view>
+  </view>
+  <view class='btnbig' bindtap='goadd'>新增出行人</view>
+</view>

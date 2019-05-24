@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "i-message": "../../disti/message/index",
+    "i-button": "../../disti/button/index"
+  },
+  "navigationBarTitleText": "登录"
+}

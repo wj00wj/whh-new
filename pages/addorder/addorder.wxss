@@ -1,0 +1,172 @@
+/* pages/addorder/addorder.wxss */
+.addForm{
+  /* height: 410rpx; */
+  width: 96%;
+  display: block;
+  text-align: left;
+  margin: 40rpx auto;
+  border: 1px solid #ccc;
+  border-radius: 6rpx;
+  position: relative;
+}
+.confirms{
+  width: 90%;
+  height: 70rpx;
+  text-align: center;
+  line-height: 70rpx;
+  color: #fff;
+  background: #97a7ff;
+  border-radius: 5rpx;
+  margin: 5rpx auto;
+  }
+.personNum{
+  width: 120rpx;
+  background: #fff;
+  position: absolute;
+  left: 40rpx;
+  top: -20rpx;
+  font-size: 28rpx;
+text-align: center;
+}
+.tipschild{
+  padding: 15rpx;
+}
+.childTitle{
+  text-align: center;
+  height: 80rpx;
+  line-height: 80rpx;
+}
+.inputcell{
+  border-bottom: 1px solid #ccc;
+  position: relative;
+  width: 667rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 28rpx;
+  padding: 0 30rpx;
+}
+
+.inputcell view{
+  width: 150rpx;
+  display: block;
+}
+.inputcell input{
+  display: block;
+  width: 520rpx;
+  height: 78rpx;
+}
+.radio{
+  padding-right: 15rpx;
+}
+.openPerson{
+  width: 60rpx;
+  height: 78rpx;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 99
+}
+.openPerson image{
+  width: 100%;
+  height: 50rpx;
+  margin-top: 15rpx;
+}
+.confirmBtn{
+  width: 720rpx;
+  height: 78rpx;
+  line-height: 78rpx;
+  text-align: center;
+  color: #fff;
+  background: #97a7ff;
+  border-radius: 5rpx;
+  margin: 30rpx auto;
+}
+
+.boxs {
+  width: 720rpx;
+  background: #fff;
+  border-radius: 10rpx;
+  margin: 20rpx auto 0;
+  box-sizing: border-box;
+}
+.delBtn{
+  width: 200rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  background: #409EFF;
+  color: #fff;
+  border-radius: 5rpx;
+  font-size: 28rpx;
+  text-align: center;
+  margin: 15rpx auto; 
+}
+.texts{
+  border: 1px solid #ddd;
+  width: 96%;
+  height: 120rpx;
+  line-height: 40rpx;
+  font-size: 28rpx;
+  color: #777;
+  padding: 12rpx 1%;
+}
+.subbtn{
+  width: 96%;
+  margin: 10rpx auto;
+  background: #ffb446;
+  color: #fff;
+  font-size: 40rpx;
+  text-align: center;
+  border-radius: 5rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+}
+.comments{
+  font-size: 28rpx;
+  color: #777;
+}
+
+.margins{
+  height:  300rpx;
+}
+
+.addBtn{
+  width: 150rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  color: #fff;
+  background: #ff9800;
+  text-align: center;
+  border-radius: 8rpx;
+  margin-top: 20rpx;
+}
+.imgs{
+  float: left;
+  width: 210rpx;
+  height: 210rpx;
+  margin: 15rpx;
+}
+.imgs image{
+  width: 100%;
+}
+
+.clearfix:after{
+  overflow: hidden;
+  content: '.';
+  display: block;
+  clear: both;
+  font-size: 0;
+  height: 0;
+}
+.clearfix{
+  zoom: 1;
+}
+.txts{
+  font-size: 28rpx;
+  color: #666;
+}
+.checkboxcell{
+  height:48px;
+}
+.checkboxcell view{
+  width:300rpx;
+}

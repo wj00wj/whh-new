@@ -1,0 +1,123 @@
+/* pages/adddata/data.wxss */
+.container{
+  align-items:left;
+padding:0 0 120rpx
+}
+.bigbox {
+  width: 86%;
+  margin: 0 auto;
+}
+.btnfinish{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 96rpx;
+  background: #db9019;
+  color: #fff;
+  font-size: 36rpx;
+  line-height: 96rpx;
+  text-align: center;
+}
+.img-titel{
+  padding:5px;
+  font-size:16px;
+
+}
+.item-ot{
+  width: 100%;
+}
+.title-smig{
+  font-size:14px;
+  color:red;
+  padding:0px 10px;
+
+}
+.item {    
+  position:relative;
+  margin:0 auto;
+  width:240px;
+  height:151px;
+  border:2rpx solid #f9c4c2;
+
+}
+.itemImg{
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index:1;
+}
+.itemImg image{
+  width: 100%;
+  height: 100%;
+}
+/*add按钮*/
+ .addIcon{
+  width: 100%;
+  height: 100%;
+  text-align:center;
+  line-height:151px;
+  font-size:80rpx;
+  background: #fff;
+  color: #999;
+  z-index:2;
+}
+/*删除按钮*/
+.delete {    
+  position:absolute;
+  right:0;
+  top:0;
+  opacity:1;
+  height:20px;
+  font-size:22rpx;
+  font-weight:700;
+  padding:0 8rpx 0 10rpx;
+  color:#999;
+  width:20px;
+  text-align:center;
+  line-height:20px;
+  color:#ffffff;
+
+}
+.itemTxt{
+  text-align: center;
+  font-size: 30rpx;
+  color: #999;
+  margin-top: 50rpx;
+  margin-bottom:  70rpx;
+  font-weight: 700;
+}
+.uploadFinish{
+  width: 100%;
+  height: 100%;
+  padding: 0 30rpx;
+  box-sizing: border-box;
+}
+.uploadFinishBtn{
+  background: #ff6666;
+  color: #fff;
+  display: block;
+  width: 100%;
+  padding: 26rpx 0;
+  text-align: center;
+  font-size: 36rpx;
+  border-radius: 10rpx;
+  margin-bottom: 40rpx;
+}
+.tipTitle{
+  text-align: center;
+  font-size: 30rpx;
+  color: #f6a29d;
+  font-weight: 700;
+  width: 100%;
+  margin: 50rpx 0;
+}
+.boxStyle{
+  width:300rpx;
+  height:100rpx;
+  position:absolute;
+  bottom:-1rpx;
+  border-radius:50%;
+  box-shadow:0rpx 10rpx 100rpx #fddbd9;
+  margin-left:35rpx;
+}

@@ -1,0 +1,56 @@
+page{
+  background: #F7E1C1;
+}
+.avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+  vertical-align: middle; 
+}
+.nickname{
+  margin-left:60rpx;
+}
+.borders{
+  width: 700rpx;
+  border: 1px solid #ccc;
+  background: #fff;
+  border-radius: 12rpx;
+  margin: 20rpx auto;
+}
+.titleName{
+  width: 130rpx;
+  font-size: 28rpx;
+  color: #555;
+  font-weight: bold;
+}
+.contentword{
+  width: 620rpx;
+  text-align: right;
+  color: #444;
+}
+.contentword image{
+  height: 45rpx;
+  width: 45rpx;
+  margin-top: 20rpx;
+}
+.bor{
+  width: 670rpx;
+  margin: 0 auto;
+  font-size: 28rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  border-bottom: 1px solid #ccc;
+}
+
+.loginout{
+  width: 700rpx;
+  /* border: 1px solid #ccc; */
+  height: 76rpx;
+  color: #fff;
+  background: #ffb446;
+  border-radius: 12rpx;
+  margin: 40rpx auto;
+  text-align: center;
+  line-height: 76rpx;
+}

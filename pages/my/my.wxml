@@ -1,0 +1,36 @@
+<view class="container">
+  <view class='borders'>
+    <image bindtap="bindViewTap" class="avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+    <text wx:if="{{userData!=null}}" class="nickname">{{userData.realName}}</text>
+    <text wx:else="{{userData!=null}}" class="nickname">暂无</text>
+  </view>
+  <view class='borders'>
+    <view class='flexs bor'>
+      <view class='titleName'>部门</view>
+      <view wx:if="{{userData!=null}}" class='contentword'>{{userData.organization.name}}
+      </view>
+      <view wx:else class='contentword'>暂无</view>
+    </view>
+    <view class='flexs bor'>
+      <view class='titleName'>手机</view>
+      <view wx:if="{{userData!=null}}" class='contentword'>{{userData.tel}}</view>
+      <view wx:else class='contentword'>暂无</view>
+    </view>
+    <view class='flexs bor'>
+      <view class='titleName'>密码</view>
+      <navigator wx:if="{{userData!=null}}" class='contentword' hover-class="none" url='../password/password'>修改</navigator>
+      <view wx:else class='contentword'>暂无</view>
+    </view>
+    <view class='flexs bor' catchtap='down' style='border-bottom:none;'>
+      <view class='titleName'>出行人</view>
+      <view wx:if="{{userData!=null}}" class='contentword' bindtap='goAdd'>
+        <image src='../../icon/moreicon.png'></image>
+      </view>
+      <view wx:else class='contentword'>暂无</view>
+    </view>
+  </view>   
+ 
+  
+
+  <view class='loginout' bindtap='goLogin' wx:if='{{islogin!=1}}'>登录</view>
+</view>

@@ -1,0 +1,174 @@
+<!--pages/product/product.wxml-->
+<i-message id="message" />
+<import src="../../wxParse/wxParse.wxml" />
+<view class='container'>
+  <view class="page-section page-section-spacing swiper">
+    <swiper indicator-dots="true" autoplay="true" circular="true" interval="5000" duration="500">
+      <block wx:for="{{tour.attachments}}" wx:key="{{index}}">
+        <swiper-item>
+          <image src="{{imgurl}}/m_showImg.do?path={{item.path}}" mode='aspectFit' class="slide-image" width="100%" height="400rpx" />
+        </swiper-item>
+      </block>
+    </swiper>
+    <view class='mark'>
+      <!-- <view>{{tour.destination}}</view> -->
+      <view>{{tour.dateTime}}天{{tour.night}}晚</view>
+    </view>
+  </view>
+  <view class='sections'>
+    <view class='proname'>{{tour.name}}</view>
+    <view class='flexs priceBox'>
+      <view class='priceL'>
+        <view class='flexs'>
+          <view wx:for='{{groupOne.groupPrices}}' wx:key='{{index}}'>
+            <view class='price {{index%2==0?"Up":"Down"}}'>
+              <view wx:if='{{item.priceType == 1}}'>儿童不占床</view>
+              <view wx:if='{{item.priceType == 2}}'>儿童占床</view>
+              <view wx:if='{{item.priceType == 0}}'>{{item.fromAge}}~{{item.toAge}}</view>
+            </view>
+            <view class='money {{index%2==0?"ups":"downs"}}'>
+            <text>￥</text>{{item.price}}</view>
+          </view>
+        </view>
+      </view>
+      <!-- <view class='dayNum'></view> -->
+    </view>
+  </view>
+  <!-- <view class='sections' wx:if='{{priceOne.otherFavourable!=undefined&&priceOne.otherFavourable!=""}}'>
+    <view class='Names'>优惠信息</view>
+    <view class='htmlbox'>
+      <text>{{priceOne.otherFavourable}}</text>
+      <text class='colors'>（限当前所选日期）</text>
+    </view>
+  </view> -->
+  <view class='sections dataOuter'>
+    <view class='Names'>团期计划</view>
+    <scroll-view class="datalist" scroll-x style="width: 100%">
+      <view class="databox {{isData==index ? 'active':'' }}" wx:for='{{tour.tourGroups}}' wx:key='{{index}}' data-info='{{index}}' bindtap="getDataBtn">
+        <view>{{item.outDateStr}}</view>
+        <view wx:if='{{item.outNumber-item.applynum>5}}'>余位>5</view>
+        <view wx:else>余位{{item.outNumber-item.applynum}}</view>
+      </view>
+      <view style='width:100rpx; height:20rpx; display:inline-block'></view>
+    </scroll-view>
+    <view class='moreData' wx:if='{{isMore}}' bindtap="open">
+      更多>
+    </view>
+  </view>
+  <!-- <view wx:for='{{dayArrays}}' wx:key='index'>
+    <template is="wxParse" data="{{wxParseData:item}}" />
+  </view> -->
+  <view class='sections'>
+    <view class='Names'>出发城市</view>
+    <view class='htmlbox'>
+      <text>{{tour.tourOrigin.name}}</text>
+    </view>
+  </view>
+  <view class='sections'>
+    <view class='Names'>服务团队</view>
+    <view class='htmlbox'>
+      <view wx:for="{{groupOne.tourGroupPersons}}" wx:key="{{index}}">{{item.name}}({{item.type}})--{{item.phone}}</view>
+    </view>
+  </view>
+  <view class='sections' wx:if='{{tour.travelNotice!=""}}'>
+    <view class='Names'>出行须知</view>
+    <view class='htmlbox'>
+      <!-- <template is="wxParse" data="{{wxParseData:roadFeature.nodes}}" /> -->
+      <rich-text nodes="{{tour.travelNotice}}" class='rich'></rich-text>
+    </view>
+  </view>
+  <view class='sections' wx:if='{{tour.bookNotice!=""}}'>
+    <view class='Names'>预定须知</view>
+    <view class='htmlbox'>
+      <!-- <template is="wxParse" data="{{wxParseData:roadFeature.nodes}}" /> -->
+      <rich-text nodes="{{tour.bookNotice}}" class='rich'></rich-text>
+    </view>
+  </view>
+  <view class='sections'>
+    <view class='Names'>详细行程</view>
+    <view class='dayLists'>
+      <view class='lines'></view>
+      <view class='daybig' wx:for='{{tour.travelPlans}}' wx:key='index'>
+        <view class='flexs daytitle'>
+          <view class='dayCircle'>{{item.fate}}</view>
+          <view class='dayWord'>
+            {{item.name}}
+          </view>
+        </view>
+        <view class='flexs iconlist'>
+          <image class='smallIcon' src='../../icon/intro.png'></image>
+          <view class='introWords'>
+          <view>
+          <rich-text nodes="{{item.description}}" class='rich'></rich-text>
+          </view>
+          <view class='imgboxs'>
+            <image wx:for="{{item.attachments}}" wx:for-item="imgItem" wx:key='{{index}}' src="{{imgurl}}/m_showImg.do?path={{imgItem.path}}" />
+          </view>
+          </view>
+        </view>
+        <view class='flexs iconlist'>
+          <image class='smallIcon' src='../../icon/bed.png'></image>
+          <view class='introWords'>{{item.reside}}</view>
+        </view>
+        <!-- <view class='flexs iconlist'>
+          <image class='smallIcon' src='../../icon/car.png'></image>
+          <view class='introWords'>{{item.vehicleInfo}}</view>
+        </view> -->
+        <view class='flexs iconlist'>
+          <image class='smallIcon' src='../../icon/eat.png'></image>
+          <view class='introWords'>{{item.meal}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- <view class='sections'>
+    <view class='Names'>取消政策</view>
+    <view class='inbox'>
+      <text class='ruleword'>【买家违约】订单生效后，因买家原因取消订单的，费用扣除标准如下：</text>
+      <view class='rulesbox'>
+        <view class='flexs'>
+          <view class='tda'>行程开始前</view>
+          <view class='tdb'>违约金（占订单总金额）</view>
+        </view>
+        <view class='flexs' wx:for='{{customerRule}}' wx:key='{{index}}'>
+          <view class='tda' wx:if='{{item.days==0}}'>当天</view>
+          <view class='tda' wx:else>{{item.days}}天</view>
+          <view class='tdb'>{{item.percent}}%</view>
+        </view>
+      </view>
+      <text class='ruleword'>【商家违约】订单生效后，因商家原因取消订单的，除全额退款外，商家还应向买家支付下表对应金额的违约金：</text>
+      <view class='rulesbox'>
+        <view class='flexs'>
+          <view class='tda'>行程开始前</view>
+          <view class='tdb'>违约金（占订单总金额）</view>
+        </view>
+        <view class='flexs' wx:for='{{companyRule}}' wx:key='{{index}}'>
+          <view class='tda' wx:if='{{item.days==0}}'>当天</view>
+          <view class='tda' wx:else>{{item.days}}天</view>
+          <view class='tdb'>{{item.percent}}%</view>
+        </view>
+      </view>
+    </view>
+  </view> -->
+  <view class='footer' wx:if='{{nobtn}}'>
+    <view class='telBtn' bindtap='call'>
+      <image mode='aspectFit' src='../../icon/tel.png'></image>
+    </view>
+    <view class='positionBtn' wx:if='{{priceOne.remainSeat!=0}}' bindtap='goOrder'>预留占位</view>
+    <view class='positionBtns' wx:if='{{priceOne.remainSeat==0}}' bindtap='goOrder'>预留占位</view>
+  </view>
+  <wux-popup position="bottom" visible="{{ visible }}" bind:close="onClosea">
+    <text class='Names'>全部团期</text>
+    <view class='dataHi'>
+      <view class="databox {{isData==index ? 'active':'' }}" wx:for='{{tour.tourGroups}}' wx:key='{{index}}' data-info='{{index}}' bindtap="getDataBtn">
+        <view>{{item.outDateStr}}</view>
+        <view wx:if='{{item.outNumber-item.applynum>5}}'>余位>5</view>
+        <view wx:else>余位{{item.outNumber-item.applynum}}</view>
+      </view>
+    </view>
+    <view class='flexs btnbox' wx:if='{{nobtn}}'>
+      <view class='Btns closebtn' bindtap="close">取消</view>
+      <view class='Btns confirmbtn' bindtap='goOrder'>确定</view>
+    </view>
+  </wux-popup>
+</view>

@@ -1,0 +1,222 @@
+/* pages/setorder/setorder.wxss */
+
+page {
+  background-color: #f8f8f8;
+}
+
+.boxs {
+  width: 720rpx;
+  background: #fff;
+  border-radius: 10rpx;
+  margin: 20rpx auto 0;
+  box-sizing: border-box;
+}
+
+.regiment {
+  height: 80rpx;
+  line-height: 80rpx;
+  padding-left: 15rpx;
+}
+
+.regiment text {
+  padding-right: 20rpx;
+  font-size: 28rpx;
+  color: #444;
+}
+
+.datalist {
+  height: 280rpx;
+}
+
+.inners {
+  width: 680rpx;
+}
+
+.databox {
+  width: 149rpx;
+  text-align: center;
+  height: 60rpx;
+  line-height: 60rpx;
+  color: #444;
+  border: 1px solid #ccc;
+  font-size: 28rpx;
+  border-radius: 7rpx;
+  margin: 10rpx;
+  display: inline-block;
+  box-sizing: border-box;
+}
+
+.personbox {
+  padding: 20rpx;
+}
+
+.addbtn {
+  width: 600rpx;
+  text-align: center;
+  height: 64rpx;
+  line-height: 64rpx;
+  color: #4096ff;
+  border: 1px solid #ddd;
+  font-size: 28rpx;
+  margin: 20rpx auto;
+  border-radius: 7rpx;
+}
+
+.addbtns {
+  width: 600rpx;
+  text-align: center;
+  height: 64rpx;
+  line-height: 64rpx;
+  color: #fff;
+  background: #4096ff;
+  font-size: 28rpx;
+  margin: 20rpx auto;
+  border-radius: 7rpx;
+}
+.childbtn{
+  width: 600rpx;
+  text-align: center;
+  height: 64rpx;
+  line-height: 64rpx;
+  color: #65A7ED;
+  border: 1px solid #ddd;
+  font-size: 28rpx;
+  margin: 20rpx auto;
+  border-radius: 7rpx;
+}
+
+.addForm{
+  height: 600rpx;
+  width: 100%;
+  display: block;
+  text-align: left;
+}
+.tipschild{
+  padding: 15rpx;
+}
+.childTitle{
+  text-align: center;
+  height: 80rpx;
+  line-height: 80rpx;
+}
+.inputcell{
+  border-bottom: 1px solid #ccc;
+  width: 748rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 28rpx;
+  padding: 0 30rpx;
+}
+
+.inputcell view{
+  width: 150rpx;
+  display: block;
+}
+.inputcell input{
+  display: block;
+  width: 520rpx;
+  height: 78rpx;
+}
+.radio{
+  padding-right: 60rpx;
+}
+.cuLists {
+  padding: 10rpx 0 30rpx;
+}
+
+.perbox {
+  width: 650rpx;
+  height: 70rpx;
+  font-size: 28rpx;
+  color: #fff;
+  border-radius: 5rpx;
+  line-height: 70rpx;
+  padding: 0 20rpx;
+  margin: 15rpx auto;
+  background: #f4c435;
+}
+
+.pername {
+  width: 200rpx;
+}
+
+.perage {
+  width: 140rpx;
+}
+
+.permoney {
+  width: 190rpx;
+}
+
+.perdel {
+  width: 120rpx;
+  text-align: right;
+  height: 70rpx;
+  overflow: hidden;
+}
+
+.icondel {
+  margin-top: 5rpx;
+  height: 60rpx;
+  width: 60rpx;
+}
+
+.comments {
+  font-size: 28rpx;
+  text-align: center;
+  height: 70rpx;
+  line-height: 57rpx;
+}
+
+.texts {
+  border-radius: 5rpx;
+  border: 1px solid #ddd;
+  height: 50rpx;
+  width: 670rpx;
+  margin: 0 auto 30rpx;
+  font-size: 28rpx;
+  padding: 15rpx;
+}
+
+.areabox {
+  width: 640rpx;
+  height: 50rpx;
+}
+
+.totalmoney {
+  color: #ffb446;
+  width: 350rpx;
+  padding-left: 30rpx;
+  line-height: 110rpx;
+  height: 110rpx;
+}
+
+.subbtn {
+  width: 350rpx;
+  margin-top: 10rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+  text-align: center;
+  color: #fff;
+  background: #ffb446;
+  border-radius: 6rpx;
+  font-size: 36rpx;
+}
+
+.yelbtn {
+  background: #ffb446;
+  color: #fff;
+  border: 1rpx solid #ffb446;
+}
+
+.confirmBtn {
+  background: #f4c435;
+  width: 100%;
+  height: 100rpx;
+  color: #fff;
+  text-align: center;
+  line-height: 100rpx;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}

@@ -1,0 +1,97 @@
+<!--order.wxml-->
+<i-message id="message" />
+<view class="container">
+  <view class='pageHeader'>
+    <!-- <wux-search-bar clear maxlength="8" bind:change='getname' bind:clear="clearname" bind:cancel="cancelname" bindconfirm='list' /> -->
+    <wux-search-bar clear maxlength="8" value="{{ name }}" controlled placeholder="客户姓名" bind:clear="clearname" bind:cancel="cancelname" bind:change='getname' />
+  </view>
+  <view class='loadmore' wx:if='{{nodata}}'>暂无订单</view>
+  <view wx:else class='listbox'>
+    <navigator class="itemBox" wx:for='{{list}}' wx:key='{{index}}' url='../detailOrder/detail?id={{item.id}}' hover-class="none">
+    <!-- <view class='itemBox' wx:for='{{list}}' wx:key='{{index}}'> -->
+      <view class='lineName'>{{item.lineName}}</view>
+      <view class='customers'>
+        <view>订单编号：</view>
+        <view>
+          {{item.orderNum}}
+        </view>
+      </view>
+      <view class='handlebox'>
+        <view class='lbox'>
+          <text>订单状态：</text>
+          <text wx:if='{{item.orderState==1}}'>待支付</text>
+          <text wx:if='{{item.orderState==2}}'>已支付</text>
+          <text wx:if='{{item.orderState==3}}'>已退款</text>
+          <text wx:if='{{item.orderState==4 || item.orderState==10}}'>
+            <text wx:if='{{item.payType==0}}'>退订中</text>
+            <text wx:if='{{item.payType==1}}'>退费中</text>
+          </text>
+          <text wx:if='{{item.orderState==5}}'>已退订</text>
+          <text wx:if='{{item.orderState==6}}'>统计审核中</text>
+          <text wx:if='{{item.orderState==7}}'>驳回到提交人</text>
+          <text wx:if='{{item.orderState==8}}'>计调审核中</text>
+          <text wx:if='{{item.orderState==9}}'>驳回到统计</text>
+        </view>
+        <view wx:if='{{item.orderState==2}}'>
+            <view wx:if='{{item.contractExtra != undefined}}'>
+                <view wx:if='{{item.contractOrder != undefined}}'> 
+                    <view wx:if='{{item.contractOrder.contractStatus == 1}}' class='contract-singed'>待签署 
+                        <text catchtap='ressend' data-info='{{item.contractOrder.id}}' class='contract-btn'>重发短信签署</text>
+                    </view>
+                    <view wx:if='{{item.contractOrder.contractStatus == 2}}' class='contract-singed'>已签署
+                        <view wx:if='{{item.contractOrder.supplyContractOrder != undefined}}'>
+                            <text wx:if='{{item.contractOrder.supplyContractOrder.contractStatus == 1}}' data-info='{{item.contractOrder.supplyContractOrder.id}}' catchtap='supplyressend' class='contract-btn'>补充协议重发签署短信</text>
+                            <text wx:if='{{item.contractOrder.supplyContractOrder.contractStatus == 2}}' class='contract-singed'>补充协议已签署</text>
+                            <text wx:if='{{item.contractOrder.supplyContractOrder.contractStatus == 4}}' class='contract-singed'>补充协议签署中</text>
+                        </view>
+                    </view>
+                    <view wx:if='{{item.contractOrder.contractStatus == 4}}' class='contract-singed'>签署中</view>
+                </view>
+                <view wx:else>
+                  <text catchtap='send' data-info='{{item.id}}' class='contract-btn'>发送签署</text>
+              </view>
+            </view>
+        </view> 
+        <view wx:if='{{item.orderState == 3}}'>
+            <view wx:if='{{item.contractExtra != undefined}}'>
+                <view wx:if='{{item.contractOrder != undefined}}'>
+                    <view wx:if='{{item.contractOrder.contractStatus == 5}}'>
+                        <text  class='contract-singed'>作废中 </text> 
+                        <text data-info='{{item.contractOrder.id}}' catchtap='ressendsms' class='contract-btn'>重发短信作废</text>
+                    </view>
+                    <text wx:if='{{item.contractOrder.contractStatus == 3}}' class='contract-singed'>已作废</text>
+                </view>
+            </view>
+        </view>
+      </view>
+      <view class='timebox'>
+        <view class='flexs'>
+          <view class='ordermoney'>实际支付：￥{{item.paid}}</view>
+          <view>下单时间：{{item.createDateStr}}</view>
+        </view>
+        <view>出团时间：{{item.outDatestr}}<text class='datatext' wx:if='{{item.isshow==1}}'>上传资料</text></view>
+        
+      </view>
+    </navigator>
+  </view>
+  <!-- <wux-popup position="bottom" visible="{{ visible }}" bind:close="onClosea">
+    <view class='wordre titles'>现在申请退款将扣除
+      <text class='moneycolor'>{{refundmoney}}元</text>
+    </view>
+    <view class='wordre ye'>退款申请发起后不可撤销，需由社长最终审核</view>
+    <view style='text-align:left'>
+      <i-panel title="请选择">
+        <i-checkbox-group current="{{refundPerson}}"  bindchange="handlePerson">
+        current属性代表现在选中的checkbox
+          <i-checkbox wx:for="{{orderPerson}}" position="right" wx:key="{{item.id}}" data-id='{{item.id}}' data-realId='{{item.realId}}' value="{{item.name}}">
+          </i-checkbox>
+        </i-checkbox-group>
+      </i-panel>
+    </view>
+
+    <view class='flexs btnbox'>
+      <view class='btns closebtn' bindtap="close">取消</view>
+      <view class='btns confirmbtn' bindtap='refund'>确定</view>
+    </view>
+  </wux-popup> -->
+</view>

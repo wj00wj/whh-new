@@ -1,0 +1,53 @@
+<!--pages/addperson/add.wxml-->
+<i-message id="message" />
+<view class='container'>
+  <view class='bigbox'>
+    <form bindsubmit="submitForm">
+      <view class='flexs inputcell'>
+        <view>姓名</view>
+        <input placeholder="必填" bindinput="getname" value='{{name}}' maxlength='5'/>
+      </view>
+      <view class='flexs inputcell'>
+        <view>性别</view>
+        <radio-group class="radio-group" bindchange="radioChange">
+          <label class="radio">
+            <radio value="男" checked='{{sex=="男"}}' />
+            <text>男</text>
+          </label>
+          <label class="radio">
+            <radio value="女" checked='{{sex=="女"}}' />
+            <text>女</text>
+          </label>
+        </radio-group>
+      </view>
+      <view class='flexs inputcell'>
+        <view>手机号</view>
+        <input type="number" placeholder="必填" value='{{tel}}' bindinput="getphone" maxlength='11'/>
+      </view>
+      <view class='flexs inputcell'>
+        <view>身份证号</view>
+        <input type="idcard" placeholder="必填" value='{{identifyNo}}' bindinput="getidnum" maxlength='18' />
+      </view>
+      <view class="names">上传身份证正面照（必填）</view>
+      <wux-upload listType="picture-card" fileList="{{ idcardurl }}" max="1" data-info='idcard' controlled url="https://www.whhtrip.com/bm/lay/file?sid={{}}" bind:change="onChange" bind:success="onSuccess" bind:fail="onFail" bind:complete="onComplete" bind:preview="onPreview" bind:remove="onRemove">
+      <!-- <wux-upload listType="picture-card" fileList="{{ idcardurl }}" max="1" data-info='idcard' controlled url="https://www.didajs.com:8443/bm/lay/file?type=idcard" bind:change="onChange" bind:success="onSuccess" bind:fail="onFail" bind:complete="onComplete" bind:preview="onPreview" bind:remove="onRemove"> -->
+        <text class='ups'>点击上传</text>
+      </wux-upload>
+      <view class="names">上传附件等（非必填）</view>
+      <wux-upload listType="picture-card" fileList="{{ otherurl }}" max="1" data-info='others' controlled url="https://www.whhtrip.com/bm/lay/file" bind:change="onChange" bind:success="onSuccess" bind:fail="onFail" bind:complete="onComplete" bind:preview="onPreview" bind:remove="onRemove">
+      <!-- <wux-upload listType="picture-card" fileList="{{ otherurl }}" max="1" data-info='others' controlled url="https://www.didajs.com:8443/bm/lay/file" bind:change="onChange" bind:success="onSuccess" bind:fail="onFail" bind:complete="onComplete" bind:preview="onPreview" bind:remove="onRemove"> -->
+        <text class='ups'>点击上传</text>
+      </wux-upload>
+    </form>
+  </view>
+  <view class='footer flexs' wx:if='{{ids==-1}}'>
+    
+  </view>
+  <view class='footer flexs' wx:elif='{{ids==""}}'>
+    <button class='btns btna' data-stas='1' disabled='{{forbide}}' bindtap='subform'>保存并返回</button>
+    <button class='btns btnb' data-stas='0' disabled='{{forbide}}' bindtap='subform'>保存并继续</button>
+  </view>
+  <view class='footer flexs' wx:else>
+    <button class='btn btna' disabled='{{forbide}}' bindtap='edit'>修改并返回</button>
+  </view>
+</view>

@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "i-message": "../../disti/message/index",
+    "i-button": "../../disti/button/index"
+  }
+}

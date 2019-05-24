@@ -1,0 +1,351 @@
+/* pages/product/product.wxss */
+@import "../../wxParse/wxParse.wxss";
+.rich{
+  width: 566rpx!important;
+  /* margin-left: 45rpx; */
+}
+/* .rich image{
+  width: 500rpx!important;
+} */
+.container {
+  background: #f1f1f1;
+}
+swiper{
+  height: 500rpx!important;
+}
+.swiper {
+  display: block;
+  height: 500rpx!important;
+  width: 750rpx;
+}
+.swiper image{
+  width: 750rpx;
+  height: 500rpx;
+}
+.page-section {
+  width: 100%;
+  position: relative;
+  background: #fff;
+}
+
+.mark {
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  font-size: 22rpx;
+  width: 105rpx;
+  overflow: hidden;
+  height: 30rpx;
+  text-align: center;
+  line-height: 30rpx;
+  padding: 10rpx;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 8rpx;
+}
+
+.sections {
+  background: #fff;
+  width: 100%;
+  margin-bottom: 10rpx;
+}
+
+.proname {
+  font-size: 28rpx;
+  line-height: 50rpx;
+  color: #444;
+  width: 700rpx;
+  margin: 0 auto;
+}
+
+.priceL {
+  width: 630rpx;
+}
+
+.priceBox {
+  width: 700rpx;
+  margin: 0 auto;
+}
+
+.price {
+  width: 130rpx;
+  height: 46rpx;
+  line-height: 46rpx;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 7rpx;
+  font-size: 22rpx;
+}
+
+.Up {
+  background: #ff9800;
+}
+
+.Down {
+  background: #97a7ff;
+}
+.childs{
+  background: #aaa;
+}
+
+.money {
+  width: 130rpx;
+  height: 46rpx;
+  line-height: 46rpx;
+  text-align: center;
+  margin-bottom: 20rpx;
+  font-size: 30rpx;
+}
+
+.money text {
+  font-size: 18rpx;
+}
+
+.ups {
+  color: #ff9800;
+}
+
+.downs {
+  color: #97a7ff;
+}
+.imgboxs{
+  margin: 0; 
+  padding: 0;
+}
+.imgboxs image{
+  width: 100%;
+}
+/* .dayNum {
+  margin-left: 40rpx;
+  font-size: 28rpx;
+  color: #777;
+  border: 1px solid #ff9800;
+  line-height: 68rpx;
+  height: 68rpx;
+  padding: 0 16rpx;
+} */
+
+.dataOuter {
+  padding: 10rpx 0;
+  position: relative;
+}
+
+.Names {
+  width: 600rpx;
+  padding-left: 15rpx;
+  line-height: 50rpx;
+  height: 50rpx;
+  font-size: 24rpx;
+  font-weight: bold;
+}
+
+.datalist {
+  white-space: nowrap;
+}
+
+.databox {
+  font-size: 22rpx;
+  width: 125rpx;
+  height: 56rpx;
+  padding-bottom: 5rpx;
+  text-align: center;
+  background: #fefefe;
+  border: 1rpx solid #bbb;
+  border-radius: 8rpx;
+  display: inline-block;
+  margin: 10rpx;
+}
+.active{
+  border: 1px solid #ff9800;
+  background: #ff9800;
+  color: #fff;
+}
+.moreData {
+  width: 110rpx;
+  height: 90rpx;
+  font-size: 26rpx;
+  text-align: center;
+  line-height: 90rpx;
+  position: absolute;
+  right: 0;
+  top: 55rpx;
+  color: #97a7ff;
+  background: #fff;
+}
+
+.dayLists {
+  position: relative;
+  overflow: hidden;
+  width: 750rpx;
+}
+
+.daybig {
+  position: relative;
+  z-index: 999;
+  font-size: 28rpx!important;
+}
+
+.lines {
+  position: absolute;
+  width: 1rpx;
+  height: 100%;
+  left: 79rpx;
+  top: 50rpx;
+  background: #ddd;
+  z-index: 1;
+}
+
+.smallIcon {
+  width: 33rpx;
+  height: 33rpx;
+  margin-top: 6rpx;
+}
+
+.introWords {
+  font-size: 26rpx;
+  line-height: 42rpx;
+  margin-left: 45rpx;
+  width: 566rpx;
+}
+
+.iconlist {
+  margin: 20rpx 20rpx 20rpx 65rpx;
+  width: 640rpx;
+}
+
+.dayCircle {
+  width: 70rpx;
+  height: 70rpx;
+  border-radius: 35rpx;
+  color: #fff;
+  background: #ff9800;
+  text-align: center;
+  line-height: 70rpx;
+  font-size: 20rpx;
+  margin-right: 25rpx;
+}
+
+.daytitle {
+  margin: 30rpx 47rpx;
+}
+
+.dayWord {
+  font-size: 26rpx;
+  font-weight: bold;
+  line-height: 60rpx;
+  width: 566rpx;
+  /* margin-top: 10rpx; */
+}
+.inbox{
+  width: 680rpx;
+  margin: 5rpx auto 20rpx;
+}
+.rulesbox{
+  margin: 8rpx auto;
+  border: 1rpx solid #ddd;
+  border-bottom: none;
+  line-height: 50rpx;
+  font-size: 24rpx;
+  width: 675rpx;
+}
+.tda{
+  padding-left: 15rpx;
+  height: 50rpx;
+  width: 250rpx;
+  border-right: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+.tdb{
+  padding-left: 15rpx;
+  border-bottom: 1px solid #ddd;
+  height: 50rpx;
+  width: 430rpx;
+}
+.ruleword{
+  font-size: 26rpx;
+}
+.footer{
+  width: 100%;
+  height: 110rpx;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  background: #fff;
+  border-top: 1px solid #ccc;
+  z-index: 999;
+  display: flex;
+}
+
+.positionBtn{
+  width: 612rpx;
+  height:86rpx;
+  letter-spacing:15rpx;
+  text-align: center;
+  line-height: 86rpx;
+  color: #fff;
+  background: #E48686 ;
+  border-radius: 10rpx;
+  font-size: 36rpx;
+  margin: 12rpx 10rpx;
+}
+.positionBtns{
+  width: 612rpx;
+  height:86rpx;
+  letter-spacing:15rpx;
+  text-align: center;
+  line-height: 86rpx;
+  color: #fff;
+  background: #bbb ;
+  border-radius: 10rpx;
+  font-size: 36rpx;
+  margin: 12rpx 10rpx;
+}
+.telBtn{
+  width: 86rpx;
+  height: 86rpx;
+  border-radius: 43rpx;
+  background: #E48686;
+  margin: 12rpx;
+}
+.telBtn image{
+  width: 86rpx;
+  height: 86rpx;
+}
+.htmlbox{
+  padding: 40rpx;
+  width: 670rpx;
+  font-size: 28rpx!important;
+  overflow: hidden;
+}
+.dataHi{
+  min-height: 500rpx;
+  overflow-y: scroll
+}
+.Btns{
+  width: 340rpx;
+  height: 50rpx;
+  text-align: center;
+  line-height: 50rpx;
+  border-radius: 25rpx;
+  font-size: 24rpx;
+  color: #fff;
+  margin: 15rpx;
+}
+.colors{
+  color: #ff9800
+}
+.btnbox{
+  text-align: center;
+}
+.closebtn{
+  background: #ccc;
+}
+.confirmbtn{
+  background: #E48686;
+}
+.popup__button {
+    display: block;
+    flex: 1;
+    color: #33cd5f;
+    position: relative;
+}

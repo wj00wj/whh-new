@@ -1,0 +1,7 @@
+<!--pages/success/success.wxml-->
+<view class='container'>
+  <icon class='icons' type="success" size="70px"></icon>
+  <view class='worda'>订单提交成功</view>
+  <view class='wordb'>可在订单列表中查看订单进度</view>
+  <view class='golink' bindtap='nav'>去往订单页面</view>
+</view>

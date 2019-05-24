@@ -1,0 +1,149 @@
+page {
+  background: #e9e9e9;
+}
+
+.pageHeader {
+  width: 100%;
+  height: 100rpx;
+  position: fixed;
+  display: flex;
+  background: #fff;
+  top: 0;
+  flex-direction: column;
+  z-index: 2;
+}
+
+.listbox {
+  margin-top: 110rpx;
+}
+
+.itemBox {
+  border: 1px solid #fff;
+  background: #fff;
+  border-radius: 10rpx;
+  padding: 10rpx;
+  margin: 0 auto 10rpx;
+  width: 700rpx;
+}
+
+.itemBox .lineName {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 28rpx;
+  width: 680rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+}
+
+.redbor {
+  border: 1px solid #ff4059;
+}
+
+.handlebox {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+}
+
+.handlebox .lbox {
+  width: 280rpx;
+  font-size: 26rpx;
+  color: #ff9800;
+  line-height: 40rpx;
+}
+
+.customers {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  font-size: 28rpx;
+  color: #ff9800
+}
+
+.handlebox .rbox {
+  width: 280rpx;
+  height: 50rpx;
+}
+
+.checks {
+  width: 680rpx;
+  height: 300rpx;
+  overflow-y: scroll;
+}
+
+.wordre {
+  height: 40rpx;
+  line-height: 40rpx;
+  font-size: 28rpx;
+  color: #333;
+}
+
+.btns {
+  width: 350rpx;
+  height: 70rpx;
+  color: #fff;
+  border-radius: 5rpx;
+  margin: 10rpx 12rpx;
+  font-size: 30rpx;
+  line-height: 70rpx;
+}
+
+.confirmbtn {
+  background: #db9019;
+}
+
+.closebtn {
+  background: #ccc;
+}
+
+.titles {
+  margin: 25rpx 0 10rpx;
+}
+
+.ye {
+  color: #db9019;
+}
+
+.moneycolor {
+  color: #e51c23;
+}
+.buttons{
+  float: right;
+  width: 120rpx;
+  height: 56rpx;
+  background: #ff9800;
+  color: #fff;
+  font-size: 22rpx;
+  padding-left:10rpx; 
+  padding-right:10rpx;
+  line-height: 56rpx;
+  margin-left: 10rpx;
+}
+
+.timebox{
+  font-size: 28rpx;
+  color: #777;
+  line-height: 48rpx;
+}
+
+.ordermoney{
+  width: 280rpx;
+}
+
+.datatext{
+  padding-left: 40rpx;
+  color: #f16e14
+}
+.contract-singed{
+  color: #777;
+  font-size: 24rpx;
+}
+.contract-btn{
+  padding: 4rpx;
+  border:1px solid #f16e14;
+  border-radius: 10rpx;
+  color: #ffffff;
+  background: #f16e14;
+  font-size: 24rpx;
+}

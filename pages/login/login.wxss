@@ -1,0 +1,46 @@
+/* pages/login/login.wxss */
+.boxs {
+  border-radius: 10rpx;
+  border: 1rpx solid #bbb;
+  margin: 150rpx auto;
+  width: 600rpx;
+  padding: 50rpx 0;
+}
+.passbtn{
+  width: 520rpx;
+  height: 86rpx;
+  line-height: 86rpx!important;
+  color: #fff;
+  background: #ff9800;
+  border-radius: 8rpx;
+  margin: 35rpx auto 20rpx;
+  font-size: 32rpx!important;
+  letter-spacing: 40rpx;
+}
+
+.inputcell {
+  width: 500rpx;
+  height: 2rem;
+  border: 1px solid #f7e1c1;
+  padding-left: 15rpx;
+  line-height: 2rem!important;
+  border-radius: 8rpx;
+  margin: 0 auto;
+  font-size: 28rpx;
+  margin-top: 20rpx;
+}
+.inputcell input{
+  height: 2rem;
+}
+.btns{
+  margin-top: 20px;
+  background: #ff9800;
+  color: #fff;
+}
+.box{
+  width: 500rpx;
+  margin: 100px auto;
+  text-align: center;
+  font-size: 32rpx;
+  line-height: 50rpx;
+}

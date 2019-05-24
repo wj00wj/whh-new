@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "wux-search-bar": "../../dist/search-bar/index",
+    "wux-popup": "../../dist/popup/index"
+  },
+  "navigationBarTitleText": "团期",
+  "enablePullDownRefresh": true
+}

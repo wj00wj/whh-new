@@ -1,0 +1,119 @@
+
+.addForm{
+  /* height: 410rpx; */
+  width: 96%;
+  display: block;
+  text-align: left;
+  margin: 40rpx auto;
+  /* border: 1px solid #ccc; */
+  border-radius: 6rpx;
+  /* position: relative; */
+}
+.personNum{
+  width: 120rpx;
+  background: #fff;
+  position: absolute;
+  left: 40rpx;
+  top: -20rpx;
+  font-size: 28rpx;
+text-align: center;
+}
+.tipschild{
+  padding: 15rpx;
+}
+.childTitle{
+  text-align: center;
+  height: 80rpx;
+  line-height: 80rpx;
+}
+.inputcell{
+  border-bottom: 1px solid #ccc;
+  position: relative;
+  width: 667rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 28rpx;
+  padding: 0 30rpx;
+}
+
+.inputcell view{
+  width: 150rpx;
+  display: block;
+}
+.inputcell input{
+  display: block;
+  width: 520rpx;
+  height: 78rpx;
+}
+.radio{
+  padding-right: 15rpx;
+}
+.getPerson{
+  width: 60rpx;
+  height: 78rpx;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.getPerson image{
+  width: 100%;
+  height: 50rpx;
+  margin-top: 15rpx;
+}
+.confirmBtn{
+  width: 720rpx;
+  height: 78rpx;
+  line-height: 78rpx;
+  text-align: center;
+  color: #fff;
+  background: #97a7ff;
+  border-radius: 5rpx;
+  margin: 30rpx auto;
+}
+
+.boxs {
+  width: 720rpx;
+  background: #fff;
+  border-radius: 10rpx;
+  margin: 20rpx auto 0;
+  box-sizing: border-box;
+}
+.delBtn{
+  width: 667rpx;
+  height: 76rpx;
+  line-height: 76rpx;
+  background: #409EFF;
+  color: #fff;
+  border-radius: 5rpx;
+  font-size: 32rpx;
+  text-align: center;
+  margin: 40rpx auto; 
+}
+.texts{
+  border: 1px solid #ddd;
+  width: 96%;
+  height: 120rpx;
+  line-height: 40rpx;
+  font-size: 28rpx;
+  color: #777;
+  padding: 12rpx 1%;
+}
+.subbtn{
+  width: 96%;
+  margin: 10rpx auto;
+  background: #ffb446;
+  color: #fff;
+  font-size: 40rpx;
+  text-align: center;
+  border-radius: 5rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+}
+.comments{
+  font-size: 28rpx;
+  color: #777;
+}
+
+.margins{
+  height:  300rpx;
+}

@@ -1,0 +1,13 @@
+{
+  "navigationBarTitleText": "订单",
+  "usingComponents": {
+    "wux-search-bar": "../../dist/search-bar/index",
+    "wux-popup": "../../dist/popup/index",
+    "i-panel": "../../disti/panel/index",
+    "i-checkbox-group": "../../disti/checkbox-group/index",
+    "i-checkbox": "../../disti/checkbox/index",
+    "i-message": "../../disti/message/index",
+    "i-button": "../../disti/button/index"
+  },
+  "enablePullDownRefresh": true
+}

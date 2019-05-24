@@ -1,0 +1,12 @@
+{
+  "usingComponents": {
+    "i-message": "../../disti/message/index",
+    "i-button": "../../disti/button/index",
+    "i-panel": "../../disti/panel/index",
+    "i-checkbox-group": "../../disti/checkbox-group/index",
+    "i-checkbox": "../../disti/checkbox/index",
+    "wux-popup": "../../dist/popup/index",
+    "wux-radio-group": "../../dist/radio-group/index",
+    "wux-radio": "../../dist/radio/index"
+  }
+}

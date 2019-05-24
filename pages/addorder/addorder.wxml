@@ -1,0 +1,141 @@
+<!--pages/setorder/setorder.wxml-->
+<i-message id="message" />
+<wux-popup position="right" visible="{{ visible }}" bind:close="onCloses">
+  <view style='text-align:left'>
+    <i-panel title="选择出行人">
+      <scroll-view scroll-y style="height: 1000rpx;" scroll-top="100">
+        <wux-radio-group name="a" value="{{ currentPerson }}" bind:change="chosePer">
+          <wux-radio wx:for="{{customerList}}" color="calm" wx:key="{{item.identity}}" title="{{item.name}}" value="{{index}}" />
+        </wux-radio-group>
+      </scroll-view>
+    </i-panel>
+  </view>
+  <view class='confirms' bindtap='closes'>确定</view>
+</wux-popup>
+<form class='addForm' wx:for="{{formlist}}" wx:key='{{index}}'>
+  <view class='personNum'>出行人{{index+1}}</view>
+  <view class='flexs inputcell'>
+    <view>姓名</view>
+    <input placeholder="请与证件保持一致(必填)" placeholder-style="color:#cfcece;" bindinput="getname" value='{{item.name}}' data-info='{{index}}' />
+    <view class='openPerson' bindtap="opens" data-info='{{index}}'>
+      <image mode='aspectFit' src='../../icon/mores.png'></image>
+    </view>
+  </view>
+  <view class='flexs inputcell'>
+    <view>人员类型</view>
+    <radio-group class="radio-group" bindchange="radioChange" data-info='{{index}}'>
+      <label class="radio">
+        <radio value="1" checked='{{item.personType=="1"}}' />
+        <text>儿童占床</text>
+      </label>
+      <label class="radio">
+        <radio value="2" checked='{{item.personType=="2"}}' />
+        <text>儿童不占床</text>
+      </label>
+      <label class="radio">
+        <radio value="3" checked='{{item.personType=="3"}}' />
+        <text>普通</text>
+      </label>
+    </radio-group>
+  </view>
+  <view class='flexs inputcell'>
+    <view>身份证号</view>
+    <input type="idcard" placeholder="请与证件保持一致(必填)" placeholder-style="color:#cfcece;" value='{{item.identity}}' data-info='{{index}}' bindinput="getidnum" maxlength='18' />
+  </view>
+  <view class='flexs inputcell'>
+    <view>手机号</view>
+    <input type="number" placeholder="必填" placeholder-style="color:#cfcece;" value='{{item.phone}}' data-info='{{index}}' bindinput="getphone" maxlength='11' />
+  </view>
+  <view class='flexs inputcell' wx:if="{{item.passport!=undefined}}">
+    <view>护照号</view>
+    <input type="text" placeholder="请与证件保持一致(必填)" placeholder-style="color:#cfcece;" value='{{item.passport}}' data-info='{{index}}' bindinput="getpassport" maxlength='30' />
+  </view>
+  <view class='flexs inputcell checkboxcell'>
+    <i-checkbox value="合同签署代表" checked="{{item.isSign}}" disabled='{{item.disabled}}' data-info='{{index}}' bindchange="signChange"></i-checkbox>
+  </view>
+  <!-- <view wx:if='{{item.attachments.length!=0}}' bindtap='goAddData' data-info='{{item.id}}' data-img='{{item.attachments}}'>
+    <view class='txts'>资料图片：</view>
+    <view class='clearfix'>
+      <view class='imgs' wx:for='{{item.attachments}}' wx:for-item="imgitem" wx:key='{{index}}'>
+        <image lazy-load="true" mode='widthFix' src='{{imgurl}}/m_showImg.do?path={{imgitem.path}}'></image>
+      </view>
+
+    </view>
+  </view>
+  <view class='addBtn' wx:else bindtap='goAddData' data-info='{{item.id}}' data-img='{{item.attachments}}'>添加资料</view> -->
+  <view class='delBtn' data-info='{{index}}' bindtap='delPerson'>删除出行人</view>
+  <!-- <view class='tipschild'>注：身高1.2米以下，且年龄不超过14岁的为儿童，儿童报名请在备注中填写监护人姓名、电话及身份证号</view> -->
+</form>
+<view class='confirmBtn' bindtap='addPerson'>新增出行人</view>
+<!-- <wux-popup position="right" visible="{{ visible }}" bind:close="onCloses">
+  <view style='text-align:left'>
+    <i-panel title="选择出行人">
+      <scroll-view scroll-y style="height: 1000rpx;" scroll-top="100">
+        <i-checkbox-group current="{{currentPerson}}" bindchange="chosePer">
+          <i-checkbox wx:for="{{customerList}}" position="right" wx:key="{{item.id}}" disabled="{{item.exist}}" value="{{item.name}}" index="{{index}}">
+          </i-checkbox>
+        </i-checkbox-group>
+      </scroll-view>
+    </i-panel>
+  </view>
+  <view class='confirmBtn' bindtap='closes'>确定</view>
+</wux-popup>
+
+<wux-popup position="bottom" visible="{{ visibleadd }}" bind:close="onCloseadd">
+<view class='childTitle'>添加儿童</view>
+  
+  <button class='confirmBtn' disabled='{{forbide}}' bindtap='addChild'>确定</button>
+</wux-popup>
+<view class='container'>
+  <view class='regiment boxs'>
+    <text>已选团期：</text>
+    <text>{{startTime}}</text>
+    <text wx:if='{{remainSeat>5}}'>余位>5</text>
+    <text wx:else>余位{{remainSeat}}</text>
+  </view>
+  <view class='boxs personbox'>
+    <view class='inners'>
+      <navigator class='addbtn' url='../addperson/add?id='>创建出行人</navigator>
+      <view class='addbtns' bindtap="opens">选择出行人</view>
+      <view wx:if='{{childPrice!=0}}' class='childbtn' bindtap='openAdd'>添加儿童</view>
+    </view>
+  </view> -->
+<!-- <view class='cuLists boxs'>
+    <view class='flexs perbox' wx:for='{{showlist}}' wx:key='{{index}}'>
+      <view class='pername'>{{item.name}}</view>
+      <view class='perage'>{{item.age}}岁</view>
+      <view class='permoney'>{{item.price}}元</view>
+      <view class='perdel' data-info='{{index}}' bindtap='removePerson'>
+        <icon class='icondel' type="cancel" size="26" color='#fff' />
+      </view>
+    </view>
+    <view class='flexs perbox' wx:for='{{childList}}' wx:key='{{index}}'>
+      <view class='pername'>{{item.name}}（儿童）</view>
+      <view class='perage'>{{item.age}}岁</view>
+      <view class='permoney'>{{item.price}}元</view>
+      <view class='perdel' data-info='{{index}}' bindtap='removechild'>
+        <icon class='icondel' type="cancel" size="26" color='#fff' />
+      </view>
+    </view>
+  </view> -->
+<view class='boxs'>
+  <view class='comments'>备注</view>
+  <view class='texts'>
+    <input class='areabox' cursor-spacing='80px' value='{{comment}}' placeholder="最多可以输入140字" maxlength='140' bindinput="getcomment" />
+  </view>
+</view>
+
+<view class='boxs margins'>
+  <i-checkbox value="是否同意拼房" wx:if="{{noneT==true}}" checked="{{isadjust}}" bindchange="adjustChange">
+  </i-checkbox>
+</view>
+
+<view class='footer flexs'>
+  <!-- <view class='totalmoney'>
+    <text style='font-size:40rpx;'>￥</text>
+    <text style='font-size:54rpx;'>{{showall}}</text>
+  </view> -->
+  <!-- <view class='subbtn' bindtap='setOrder'>提交订单</view> -->
+  <button class='subbtn' disabled='{{forbide}}' bindtap='setOrder'>提交订单</button>
+  <!-- </view> -->
+</view>

@@ -1,0 +1,75 @@
+<!--index.wxml-->
+<view class="container">
+  <view class='pageHeader'>
+    <wux-search-bar clear maxlength="8" value="{{ tourName }}" controlled placeholder="团期名称" bind:clear="clearname" bind:cancel="cancelname" bind:change='getname' />
+    <view class='filters'>
+      <view class='filterItem' bindtap="open1">
+        <text>产品类别</text>
+        <image class='img' src='../../icon/down.png'></image>
+      </view>
+      <view class='filterItem' bindtap="open2">
+        <text>出发地</text>
+        <image class='img' src='../../icon/down.png'></image>
+      </view>
+      <!-- <view class='filterItem' bindtap="open3">
+        <text class='word'>价格区间</text>
+        <image class='img' src='../../icon/down.png'></image>
+      </view>
+      <view class='filterItem' bindtap="open4">
+        <text>出游天数</text>
+        <image class='img' src='../../icon/down.png'></image>
+      </view> -->
+    </view>
+  </view>
+  <wux-popup position="top" visible="{{ visible1 }}" bind:close="onClose1">
+    <view class='styleBox'>
+      <view class="styleItem {{lineTypeId=='' ? 'active':'' }}" data-info='' bindtap='styleOn'>全部</view>
+      <view class="styleItem {{lineTypeId==item.id ? 'active':'' }}" wx:for='{{styleArray}}' wx:for-item="item"  wx:key="id" data-info='{{item.id}}' bindtap='styleOn'>{{item.name}}</view>
+    </view>
+  </wux-popup>
+  <wux-popup position="top" visible="{{ visible2 }}" bind:close="onClose2">
+    <view class='styleBox'>
+      <view class="sixItem {{originId=='' ? 'active':'' }}" data-info='' bindtap='dateOn'>全部</view>
+      <view class="sixItem {{originId==item.id ? 'active':'' }}" data-info='{{item.id}}' wx:for='{{tourOrigins}}' wx:for-item="item" bindtap='dateOn' wx:key="index">{{item.name}}</view>
+    </view>
+  </wux-popup>
+  
+  <view class='hotelListContent'>
+    <view wx:if="{{errors}}">
+      <navigator class='itemBox' wx:for='{{list}}' wx:for-item="item" wx:key='id' url='../product/product?id={{item.id}}'>
+        <text class='tag'>{{item.tourType.name}}</text>
+        <view class='img' wx:for='{{item.attachments}}' wx:if="{{index==0}}" wx:for-item="imgitem" wx:key='{{index}}'>
+          <image class='imgs' lazy-load="true" mode='widthFix' src='{{imgurl}}/m_showImg.do?path={{imgitem.path}}'></image>
+        </view>
+        <view class='information'>
+          <text class='regimentName'>{{item.name}}</text>
+          <view class='texto'>出发地：{{item.tourOrigin.name}}</view>
+          <view class='texto'>出团日期：
+            <text class='dataBox' wx:for='{{item.tourGroups}}' wx:if="{{index<2}}" wx:key='{{index}}' wx:for-item='groupItem'>{{groupItem.outDateStr}}</text>
+          </view>
+          <view class='infoBox'>
+            <view class='priceBox'>
+              <text class='yuan'>￥</text>
+              <text class='priceNum'>{{item.minNormal}}</text>
+              <text class='yuan'>元/人起</text>
+            </view>
+            <view>
+              <!-- <text class='isHave'>{{item.seatStatus}}</text> -->
+            </view>
+          </view>
+        </view>
+      </navigator>
+    </view>
+    <text wx:else class='loadmore'>网页跑丢了，请下拉刷新</text>
+    <!-- <view wx:if="{{loadenable}}" class='loadmore'>
+          <image src='../../icon/loading.gif' class="loading" mode="scaleToFill" style='margin:auto 0;'></image>
+          <text style='margin-left:20rpx;'>正在加载更多</text>
+     </view>
+     <text wx:else class='loadmore'>没有更多了</text> -->
+    <text wx:if="{{nomore}}" class='loadmore' style='margin-top:95rpx;'>暂无团期</text>
+    <view class='nologin' wx:if="{{login}}">
+      <text>您当前未登录...</text>
+      <navigator class='loginbtn' url='../login/login'>前往登录</navigator>
+    </view>
+  </view>
+</view>

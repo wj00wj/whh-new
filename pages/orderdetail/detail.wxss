@@ -1,0 +1,77 @@
+/* pages/orderdetail/detail.wxss */
+Page{
+  background: #e9e9e9;
+}
+.boxs{
+  width: 680rpx;
+  margin: 10rpx auto;
+  border: 1px dashed #ccc;
+  border-radius: 15rpx;
+  font-size: 28rpx;
+  color: #ff9800;
+  line-height: 38rpx;
+  padding: 20rpx;
+  overflow: hidden;
+  background: #fff;
+}
+.btns{
+  width: 700rpx;
+  height: 86rpx;
+  line-height: 86rpx;
+  color: #fff;
+  background: #1aad19;
+  text-align: center;
+  border-radius: 8rpx;
+  position: fixed;
+  left: 28rpx;
+  bottom: 10rpx;
+  font-size: 32rpx;
+}
+.word{
+  font-size: 28rpx;
+  line-height: 90rpx;
+  height: 90rpx;
+  text-align: center;
+}
+
+.iconedit{
+  width: 28rpx;
+  height: 28rpx;
+}
+.perlist{
+  width: 670rpx;
+  height: 70rpx;
+  line-height: 70rpx;
+  border-radius: 5rpx;
+  color: #fff;
+  background: #ff9800;
+  margin: 10rpx auto 5rpx;
+  font-size: 28rpx;
+}
+.boxdiv{
+  background: #fff;
+  width: 680rpx;
+  padding: 15rpx;
+  border-radius: 5rpx;
+  margin:15rpx auto 0;
+}
+.inners{
+  width: 630rpx;
+  margin: 10rpx auto;
+  border: 1px dashed #ccc;
+  border-radius: 15rpx;
+  font-size: 28rpx;
+  line-height: 38rpx;
+  padding: 20rpx;
+}
+.areabox{
+  width: 630rpx;
+  height: 150rpx;
+}
+.tips{
+  width: 680rpx;
+  color: #333;
+  line-height: 44rpx;
+  margin: 30rpx auto;
+  font-size: 28rpx;
+}

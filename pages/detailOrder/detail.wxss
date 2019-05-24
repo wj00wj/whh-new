@@ -1,0 +1,136 @@
+/* pages/detailOrder/detail.wxss */
+.colorred{
+  color: red;
+}
+Page{
+  background: #e9e9e9;
+}
+.failword{
+  font-size: 32rpx;
+  text-align: center;
+  line-height: 100rpx;
+}
+.boxs{
+  width: 680rpx;
+  margin: 10rpx auto;
+  border: 1px dashed #ccc;
+  border-radius: 15rpx;
+  font-size: 28rpx;
+  color: #ff9800;
+  line-height: 38rpx;
+  padding: 20rpx;
+  overflow: hidden;
+  background: #fff;
+}
+.btns{
+  width: 700rpx;
+  height: 86rpx;
+  line-height: 86rpx;
+  color: #fff;
+  background: #1aad19;
+  text-align: center;
+  border-radius: 8rpx;
+  position: fixed;
+  left: 28rpx;
+  bottom: 10rpx;
+  font-size: 32rpx;
+}
+.word{
+  font-size: 28rpx;
+  line-height: 90rpx;
+  height: 90rpx;
+  text-align: center;
+}
+
+.iconedit{
+  width: 28rpx;
+  height: 28rpx;
+}
+.perlist{
+  width: 670rpx;
+  height: 70rpx;
+  line-height: 70rpx;
+  border-radius: 5rpx;
+  color: #fff;
+  background: #ff9800;
+  margin: 10rpx auto 5rpx;
+  font-size: 28rpx;
+}
+.boxdiv{
+  background: #fff;
+  width: 680rpx;
+  padding: 15rpx;
+  border-radius: 5rpx;
+  margin:15rpx auto 0;
+}
+.inners{
+  width: 630rpx;
+  margin: 10rpx auto;
+  border: 1px dashed #ccc;
+  border-radius: 15rpx;
+  font-size: 28rpx;
+  line-height: 38rpx;
+  padding: 20rpx;
+}
+.areabox{
+  width: 630rpx;
+  height: 150rpx;
+}
+.tips{
+  width: 680rpx;
+  color: #333;
+  line-height: 44rpx;
+  margin: 30rpx auto;
+  font-size: 28rpx;
+}
+
+.addBtn{
+  width: 150rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  color: #fff;
+  background: #ff9800;
+  text-align: center;
+  border-radius: 8rpx;
+  margin-top: 20rpx;
+}
+.imgs{
+  float: left;
+  width: 185rpx;
+  height: 185rpx;
+  margin: 15rpx;
+  overflow:hidden;
+}
+.imgs image{
+  width: 100%;
+}
+.canclebtns{
+  width: 150rpx;
+  height: 60rpx;
+  color: #fff;
+  background: #ccc;
+  border-radius: 5rpx;
+  text-align: center;
+  line-height: 60rpx;
+  margin-top:20rpx; 
+}
+.textss{
+  width: 90%;
+  padding: 15rpx;
+  box-sizing: border-box;
+  height: 160rpx;
+  border-radius: 5rpx;
+  border:1rpx solid #ccc;
+  margin: 20rpx auto;
+  display: block;
+  text-align: left;
+}
+.confirms{
+  width: 100%;
+  height: 76rpx;
+  line-height: 76rpx;
+  text-align: center;
+  color: #fff;
+  font-size: 32rpx;
+  background: #ff9800
+}

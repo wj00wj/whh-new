@@ -1,0 +1,26 @@
+<!--pages/login/login.wxml-->
+<i-message id="message" />
+<view class='container'>
+<view class='box' wx:if="{{!hasUserInfo && canIUse}}">
+<view>我们需要用到您的以下信息</view>
+<view>1.头像</view>
+<view>2.昵称</view>
+<view>3.地区</view>
+<view>4.性别</view>
+ <button class='btns' open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 同意获取 </button>
+
+</view>
+ <block wx:else>
+  <view class='boxs'>
+    <view class="inputcell">
+      <input class="weui-input"  type="text" maxlength='11' value='{{phone}}' placeholder="请输入手机号" bindinput="getphone" />
+    </view>
+    <view class="inputcell">
+      <input class="weui-input" password type="text" maxlength='20' value='{{password}}' placeholder="请输入密码" bindinput="getpass" />
+    </view>
+    <button class='passbtn' size='mini' bindtap='logins' style='display: block;'>登录</button>
+  </view>
+</block>
+   
+
+</view>

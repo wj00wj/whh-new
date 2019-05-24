@@ -1,0 +1,233 @@
+/**index.wxss**/
+
+/* .userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 200px;
+} */
+
+/* .flex-wrp{
+  height: 300px;
+  flex-direction: column;
+} */
+Page{
+  background: #e9e9e9;
+}
+.nologin {
+  margin-top: 170rpx;
+  text-align: center;
+  font-size: 28rpx;
+}
+
+.loginbtn {
+  font-size: 28rpx;
+  width: 150rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  color: #fff;
+  background: #ff9800;
+  border-radius: 5rpx;
+  margin: 20rpx auto;
+}
+
+.hotelListContent {
+  margin-top: 193rpx;
+  width:100%;
+  overflow-x:hidden; 
+}
+
+.pageHeader {
+  width: 100%;
+  position: fixed;
+  display: flex;
+  background: #fff;
+  top: 0;
+  flex-direction: column;
+  z-index: 1001;
+}
+
+.filters {
+  border-bottom: 1px solid #ccc;
+}
+
+.itemBox {
+  width: 100%;
+  height: 200rpx;
+  padding: 15rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+  border-bottom: 1px solid #ccc;
+  box-sizing: border-box;
+  background: #fff;
+}
+
+.itemBox .img {
+  width: 243rpx;
+  height: 182rpx;
+  overflow: hidden;
+  margin-right: 15rpx;
+}
+
+.itemBox .img .imgs {
+  width: 100%;
+}
+
+.itemBox .tag {
+  width: 120rpx;
+  height: 38rpx;
+  font-size: 22rpx;
+  line-height: 38rpx;
+  overflow: hidden;
+  background: #000;
+  color: #fff;
+  position: absolute;
+  opacity: 0.5;
+  left: 15rpx;
+  top: 9rpx;
+  text-align: center;
+}
+
+.information {
+  height: 170rpx;
+  width: 468rpx;
+}
+.texto{
+  font-size: 22rpx;
+  color: #888;
+  margin-top: 10rpx;
+}
+.dataBox{
+  border: 1rpx solid #ddd;
+  border-radius: 3rpx;
+  padding: 0 5rpx;
+  margin: 0 5rpx;
+}
+.infoBox {
+  width: 100%;
+  height: 40rpx;
+  padding: 16rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.priceBox {
+  width: 65%;
+}
+
+.yuan {
+  font-size: 22rpx;
+  color: #ff9800;
+}
+
+.priceNum {
+  font-size: 34rpx;
+  color: #ff9800;
+}
+
+.regimentName {
+  width: 100%;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+  font-size: 28rpx;
+}
+
+.isHave {
+  font-size: 24rpx;
+  color: #8e8e8e;
+}
+
+/* 筛选行 */
+
+.pageHeader {
+  width: 100%;
+}
+
+.filters {
+  height: 80rpx;
+  line-height: 80rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.filterItem {
+  width: 50%;
+  text-align: center;
+  font-size: 28rpx;
+}
+
+.filterItem .img {
+  width: 25rpx;
+  height: 25rpx;
+  margin-left: 5rpx;
+}
+
+.styleBox {
+  width: 100%;
+  height: 207rpx;
+  padding-top: 200rpx;
+  padding-bottom: 15rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.styleItem {
+  border: 1px solid #d57f00;
+  color: #777;
+  text-align: center;
+  width: 110rpx;
+  margin: 0 18rpx;
+  border-radius: 10rpx;
+  height: 70rpx;
+  line-height: 70rpx;
+  font-size: 24rpx;
+}
+
+.sixItem {
+  border: 1px solid #d57f00;
+  color: #777;
+  text-align: center;
+  width: 129rpx;
+  margin: 0 28rpx;
+  border-radius: 10rpx;
+  height: 70rpx;
+  line-height: 70rpx;
+  font-size: 24rpx;
+}
+
+.active {
+  background: #d57f00;
+  color: #fff;
+}
+
+.listContent {
+  width: 100%;
+  position: absolute;
+  top: 166rpx;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: white;
+}
