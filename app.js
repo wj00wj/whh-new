@@ -37,6 +37,7 @@ App({
     userInfo: null,
     interfaceUrl: "https://test.dhhs.com.cn",
     // interfaceUrl:"https://travel.dhhs.com.cn",
+    testId:'',
     userData: null,
     openid: '',
     tel:'',
